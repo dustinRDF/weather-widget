@@ -1,8 +1,20 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-@Component( { 
-  selector: 'my-app',
-  template: '<h1>Skeleton Project</h1>'
+@Component( {
+  selector: "my-app",
+  styles: [ `
+    .container {
+      padding-top: 5rem;
+    }
+
+  ` ],
+  template: `
+    <div class="container">
+      <div class="col-xs-4">
+        <weather-widget></weather-widget>
+      </div>
+    </div>
+  `,
 } )
 
-export class AppComponent {  };
+export class AppComponent {  }
