@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { JsonpModule } from "@angular/http";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from './app.component';
-import { WeatherComponent } from './weather-widget/component/weather.component';
+import { AppComponent } from "./app.component";
+import { WeatherComponent } from "./weather-widget/component/weather.component";
 
-@NgModule( { 
-  imports: [ BrowserModule ],
+@NgModule( {
+  bootstrap: [ AppComponent ],
   declarations: [ AppComponent, WeatherComponent ],
-  bootstrap: [ AppComponent ]
+  imports: [ BrowserModule, JsonpModule ],
 } )
 
-export class AppModule {  } 
+export class AppModule {  }
