@@ -3,7 +3,7 @@
   <div class="card-header">
 
     <div class="col-xs-8">
-      <p>Waynesboro, MS</p>
+      <p>{{ currentLocation }}</p>
     </div>
     <div class="col-xs-4 text-xs-right">
       <h1>{{ weatherData.temp | number: ".0-0" }}&deg;</h1>
@@ -13,7 +13,7 @@
 
   <div class="card-block">
 
-    <h1>0</h1>
+    <canvas id="icon"></canvas>
     <p>{{ weatherData.summary }}</p>
 
   </div>
@@ -22,7 +22,7 @@
 
     <div class="col-xs-5">
       <p>Wind</p>
-      <p>{{ weatherData.wind }}mph</p>
+      <p>{{ weatherData.wind }} mph</p>
     </div>
 
     <div class="col-xs-5 offset-xs-2">
